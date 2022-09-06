@@ -1,0 +1,7 @@
+# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:4.4.14
+    ports:
+      - "27017:27017"

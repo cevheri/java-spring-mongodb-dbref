@@ -1,0 +1,46 @@
+
+### First
+### Send Address Post Request
+POST http://localhost:8080/api/addresses
+Content-Type: application/json
+
+{
+  "id": "a1",
+  "addressLine": "address line 01"
+}
+
+
+### Second
+### Send Department Post Request
+POST http://localhost:8080/api/departments
+Content-Type: application/json
+
+{
+  "id":"d1",
+  "name": "Department"
+}
+
+
+### Third
+### Send Person Post Request
+POST http://localhost:8080/api/people
+Content-Type: application/json
+
+{
+  "firstName": "content",
+  "lastName": "content",
+  "department": {
+    "id": "d1",
+    "name": "department1"
+  },
+  "addresses": [
+    {
+      "id": "a1",
+      "addressLine": "address line 01"
+    }
+  ]
+}
+
+### Final
+### Send Get Request findAll
+GET http://localhost:8080/api/people
